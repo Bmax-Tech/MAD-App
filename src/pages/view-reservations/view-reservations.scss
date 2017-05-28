@@ -1,0 +1,21 @@
+page-view-reservations {
+  .list_heading {
+    font-weight: 500;
+    color: #4d4d4d;
+  }
+  .list_item{
+    color: #8c8c8c;
+  }
+  .edit_button{
+    background: #c8c8c8;
+    color: #000;
+  }
+  .delete_button{
+    background: #de0d0d;
+    color: #FFF;
+  }
+  #add_res_btn{
+    background: transparent;
+    font-size: large;
+  }
+}

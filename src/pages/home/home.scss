@@ -1,0 +1,33 @@
+page-home {
+  ion-content {
+    background: #26D0CE; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #1A2980, #26D0CE); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #1A2980, #26D0CE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  ion-navbar .toolbar-background {
+    background: #2081a9 !important
+  }
+
+  ion-title .toolbar-title {
+    color: #FFF !important;
+  }
+
+  ion-slides {
+    height: 200px;
+    margin-bottom: 25px;
+  }
+
+  ion-slide {
+    background-size: 100%;
+  }
+
+  .hotel_image {
+    width: 100%;
+  }
+
+  .card {
+    background: #8bddff;
+    margin-bottom: 5px;
+  }
+}

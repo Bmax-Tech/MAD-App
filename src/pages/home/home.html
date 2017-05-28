@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle style="color: #FFF !important;">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title style="color: #FFF !important;">Home</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-slides pager>
+        <ion-slide style="background-image: url('../assets/images/slide_1.jpg')">
+        </ion-slide>
+        <ion-slide style="background-image: url('../assets/images/slide_2.jpg')">
+        </ion-slide>
+        <ion-slide style="background-image: url('../assets/images/slide_3.jpg')">
+        </ion-slide>
+    </ion-slides>
+    <ion-searchbar (ionInput)="getItems($event)" [(ngModel)]="searchInput"></ion-searchbar>
+    <ion-list>
+        <ion-item *ngFor="let item of items" (click)="addReservation(item.id)" class="card">
+            <ion-row>
+                <ion-col col-3>
+                    <img class="hotel_image" src="../assets/images/hotel_{{item.id}}.png"/>
+                </ion-col>
+                <ion-col col-9>
+                    <h2>{{ item.name }}</h2>
+                    <p>{{item.location}}</p>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+    </ion-list>
+</ion-content>

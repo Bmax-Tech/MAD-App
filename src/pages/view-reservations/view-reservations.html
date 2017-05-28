@@ -1,0 +1,35 @@
+<!--
+  Generated template for the ViewReservations page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Reservations</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item-sliding *ngFor="let reservation of reservations">
+            <ion-item>
+                <h3 class="list_heading">ID : {{reservation.id}}</h3>
+                <p class="list_item">Name : {{reservation.name}}</p>
+                <p class="list_item">Date : {{reservation.date}}</p>
+                <p class="list_item">Count : {{reservation.count}}</p>
+            </ion-item>
+            <ion-item-options>
+                <button color="dark" class="edit_button" (click)="editReservation(reservation)">
+                    &nbsp;&nbsp;<ion-icon name="settings"></ion-icon>&nbsp;&nbsp;Edit&nbsp;&nbsp;
+                </button>
+                <button color="danger" class="delete_button" (click)="removeReservation(reservation)">
+                    &nbsp;&nbsp;<ion-icon name="trash"></ion-icon>&nbsp;&nbsp;Delete&nbsp;&nbsp;
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>
